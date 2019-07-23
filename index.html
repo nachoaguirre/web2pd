@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<title>Web2PD</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="web2pd.js"></script>
+</head>
+
+<body>
+	
+<h1>Web2Pd</h1>
+
+<h2>Instructions</h2>
+<ol>
+	<li>Set host IP and Port in web2pd.php file</li>
+	<li>Open .pd file and set the same port in <i>[netreceive] object</i></li>
+	<li>Have fun ;)</li>
+</ol>
+
+<h2>Try it out</h2>
+<form id="form" onSubmit="return false">
+	Message: <input name="msg" type="text" placeholder="Set a message to send." />
+	<input type="button" value="Send to PD" onClick="web2pd(msg.value)" >
+  
+	<br /><br />
+  
+	Sample Messages
+	<br />
+	<input type="button" value="Hello" onClick="web2pd(this.value)" />
+	<input type="button" value="127"   onClick="web2pd(this.value)" />
+	<input type="button" value="Test"  onClick="web2pd(this.value)" />
+	<input type="button" value="Ups!"  onClick="web2pd(this.value)" />
+</form>
+
+<div id="console" style="width:100%; height: 15%; background-color: #fff79c; position: absolute; bottom: 0; left:0; overflow: scroll;">
+	<ul id="verbose">
+		
+	</ul>
+
+</div>
+	
+
+</body>
+
+</html>
